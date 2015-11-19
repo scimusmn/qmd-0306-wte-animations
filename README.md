@@ -1,4 +1,4 @@
-### Weightlessness Video Player
+### QMD Video Player
 
 ### Installation
 #### 1. Install dependencies.
