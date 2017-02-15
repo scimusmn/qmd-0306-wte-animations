@@ -48,7 +48,7 @@ img {
   z-index: 1;
   position: absolute;
   top:375px;
-  transition: all .13s ease-out;
+  transition: all .12s ease-out;
 }
 
 #selection-screen .video-button:active {
@@ -57,28 +57,21 @@ img {
 }
 
 #selection-screen .video-button.active {
-  transform: scale(1.065) translate(0px, -2px);
+  transform: scale(1.04) translate(0px, -2px);
 }
 
 #selection-screen .video-01.inactive {
-  transform: scale(0.99) translate(-8px, -1px);
+  transform: scale(0.99);
   opacity:0.6;
 }
 
 #selection-screen .video-02.inactive {
+  transform: scale(0.99);
   opacity:0.6;
 }
 
-#selection-screen .video-02.inactive.p-1 {
-  transform: scale(0.99) translate(8px, -1px);
-}
-
-#selection-screen .video-02.inactive.p-3 {
-  transform: scale(0.99) translate(-8px, -1px);
-}
-
 #selection-screen .video-03.inactive {
-  transform: scale(0.99) translate(8px, -1px);
+  transform: scale(0.99);
   opacity:0.6;
 }
 
