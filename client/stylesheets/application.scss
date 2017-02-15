@@ -56,6 +56,23 @@ img {
   transition: all .03s ease-out;
 }
 
+.video-button .play-btn{
+  position: absolute;
+
+  top: 241px;
+  left: 163px;
+
+  width: 154px;
+  height: 153px;
+
+  background: url(../images/playBtn.png);
+
+}
+
+.video-button:active .play-btn {
+  background: url(../images/playBtn-active.png);
+}
+
 #selection-screen .video-button.active {
   transform: scale(1.03) translate(0px, 0px);
 }
@@ -126,20 +143,19 @@ img {
 
 .home-button {
   position: absolute;
-  bottom: 0;
-  left: 0;
+  bottom: -28px;
+  left: -75px;
   text-align: center;
   margin: 0;
-  padding: 50px 70px 16px 12px;
-  /*background-color: rgba(255,22,111,0.4);*/
-}
-
-.home-button img {
+  width: 300px;
+  height: 200px;
+  background: url(../images/homeIcon.png) no-repeat center;
   transition: all .1s ease-out;
 }
 
-.home-button:active img {
-  transform: scale(0.94);
+.home-button:active {
+  transform: scale(0.96);
+  background: url(../images/homeIconActive.png) no-repeat center;
 }
 
 .looping-background {

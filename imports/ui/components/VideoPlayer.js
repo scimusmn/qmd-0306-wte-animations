@@ -3,7 +3,9 @@ import VideoHomeButton from './VideoHomeButton';
 
 class VideoPlayer extends React.Component {
   constructor(props) {
+
     super(props);
+
     this.state = {
       videoPlaying: props.videoPlaying,
     };

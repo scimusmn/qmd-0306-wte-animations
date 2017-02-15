@@ -49,6 +49,7 @@ class VideoCard extends React.Component {
           <div className='en'>{video.labelEn}</div>
           <div className='es'>{video.labelEs}</div>
         </h2>
+        <div className='play-btn'></div>
       </div>
     );
   }
