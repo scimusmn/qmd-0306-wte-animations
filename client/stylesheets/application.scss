@@ -57,7 +57,7 @@ img {
 }
 
 #selection-screen .video-button.active {
-  transform: scale(1.04) translate(0px, -2px);
+  transform: scale(1.03) translate(0px, 0px);
 }
 
 #selection-screen .video-01.inactive {
@@ -130,18 +130,16 @@ img {
   left: 0;
   text-align: center;
   margin: 0;
-  padding: 42px 85px 42px 41px;
+  padding: 50px 70px 16px 12px;
+  /*background-color: rgba(255,22,111,0.4);*/
 }
 
 .home-button img {
-  width: 60px;
-  opacity: .5;
   transition: all .1s ease-out;
 }
 
 .home-button:active img {
-  transform: scale(0.96);
-  opacity: .75;
+  transform: scale(0.94);
 }
 
 .looping-background {
