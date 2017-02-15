@@ -27,6 +27,11 @@ body {
 .noselect {
 }
 
+/* Prevent image ghost-dragging */
+img {
+  pointer-events:none;
+}
+
 .ExhibitComponents,
 .ViewExhibitComponent,
 .EditExhibitComponent,
@@ -37,129 +42,60 @@ body {
 }
 
 /**
- * Selection screen - English and Spanish colors
- */
-.en{
-  color: #afafaa;
-}
-
-.es{
-  color: #f26322;
-}
-
-/**
- * Selection screen - Top level headline
- */
-h1 {
-  text-align: center;
-}
-
-h1 div.en {
-  margin-top: 52px;
-}
-
-h1 div.en,
-h1 div.es {
-  font-family: 'Avenir Next Condensed Bold', sans-serif;
-  line-height: 70px;
-  font-size: 65px;
-}
-
-h1 div.es {
-  font-size: 58px;
-}
-
-/**
- * Selection screen - Video button questions
- */
-.video-button h2 { margin-top: 0 }
-
-/* Slightly lighter shade to increase the contrast and improve readability */
-/* TODO: review with designers */
-h2 div.es {
-  color: #f5763c;
-}
-
-h2 div.en,
-h2 div.es {
-  font-family: 'Avenir Next Condensed Medium', sans-serif;
-  margin: 0 0 0 20px;
-  line-height: 33px;
-  font-size: 25px;
-}
-
-h2 div.en {
-  border-bottom: 2px solid #ebed4f;
-  padding-bottom: 7px;
-  margin: 0 20px 9px 20px;
-}
-
-h2 div.es {
-  margin: 5px 20px 0 20px;
-}
-
-/**
  * Selection screen - Button positions
  */
 #selection-screen .video-button {
-  font-family: "Avenir Next Condensed Bold", sans-serif;
-  background-color: rgba(46, 46, 46, 0.85);
   z-index: 1;
   position: absolute;
-  top: 249px;
-  left: 30px;
-  width: 591px;
-  min-height: 375px;
-  transition: all .15s ease-out;
+  top:375px;
+  transition: all .13s ease-out;
 }
 
 #selection-screen .video-button:active {
   transform: scale(0.99) translate(0px, 2px);
   transition: all .03s ease-out;
-  background-color: rgba(44, 44, 44, 0.8);
 }
 
 #selection-screen .video-button.active {
-  transform: scale(1.06) translate(0px, -2px);
-  background-color: rgba(100, 100, 100, 0.6);
+  transform: scale(1.065) translate(0px, -2px);
+}
+
+#selection-screen .video-01.inactive {
+  transform: scale(0.99) translate(-8px, -1px);
+  opacity:0.6;
+}
+
+#selection-screen .video-02.inactive {
+  opacity:0.6;
+}
+
+#selection-screen .video-02.inactive.p-1 {
+  transform: scale(0.99) translate(8px, -1px);
+}
+
+#selection-screen .video-02.inactive.p-3 {
+  transform: scale(0.99) translate(-8px, -1px);
+}
+
+#selection-screen .video-03.inactive {
+  transform: scale(0.99) translate(8px, -1px);
+  opacity:0.6;
 }
 
 #selection-screen .video-button img {
-  margin: 20px;
+  margin: 0px;
 }
 
-#selection-screen .video-02,
-#selection-screen .video-04 {
-  left: 658px;
+#selection-screen .video-01 {
+  left: 160px;
 }
 
-#selection-screen .video-03,
-#selection-screen .video-06 {
-  left: 1287px;
+#selection-screen .video-02 {
+  left: 700px;
 }
 
-#selection-screen .video-04,
-#selection-screen .video-05,
-#selection-screen .video-06 {
-  top: 663px;
-}
-
-/**
- * Rules for kiosks with fewer videos
- */
-#selection-screen.vid-count-4 .video-03{
-  top: 663px;
-}
-
-#selection-screen.vid-count-4 .video-01,
-#selection-screen.vid-count-4 .video-03,
-#selection-screen.vid-count-5 .video-04 {
-  left: 349px;
-}
-#selection-screen.vid-count-4 .video-02,
-#selection-screen.vid-count-4 .video-04,
-#selection-screen.vid-count-5 .video-05 {
-  left: 980px;
+#selection-screen .video-03 {
+  left: 1250px;
 }
 
 /**

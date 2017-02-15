@@ -96,13 +96,20 @@ class KioskVideoList extends React.Component {
 
   }
 
-  isActiveCard(index) {
+  getActiveState(index) {
+    let state = '';
 
-    if (index == this.state.selectedPosition) {
-      return true;
-    } else {
-      return false;
+    if (this.state.selectedPosition >= 0) {
+
+      if (index == this.state.selectedPosition) {
+        return 'active';
+      } else {
+        return 'inactive ' + 'p-' + this.state.selectedPosition;
+      }
     }
+
+    return state;
+
   }
 
   launchVideoPlayer(e) {
@@ -182,7 +189,7 @@ class KioskVideoList extends React.Component {
         key={video._id}
         position={this.videoOrder[index]}
         video={video}
-        isActive={this.isActiveCard(this.videoOrder[index])}
+        activeState={this.getActiveState(this.videoOrder[index])}
       />
     );
 
@@ -202,12 +209,6 @@ class KioskVideoList extends React.Component {
             </div>
             : null
         }
-
-        {/* Coaches Corner headline title *//* Coaches Corner headline title */}
-        <h1>
-          <div className='en'>Select a question to learn more.</div>
-          <div className='es'>Elige una pregunta para aprender más.</div>
-        </h1>
 
         {/* Question buttons *//* Question buttons */}
         {videoCards}

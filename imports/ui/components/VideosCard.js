@@ -22,9 +22,9 @@ class VideoCard extends React.Component {
 
   getClassName() {
 
-    let className = 'video-button ' + ((this.props.isActive == true) ? 'active' : '');
+    let className = 'video-button';
 
-    className += ' video-0' + this.props.position;
+    className += ' video-0' + this.props.position + ' ' + this.props.activeState;
 
     return className;
 
@@ -60,7 +60,7 @@ VideoCard.propTypes = {
   video: React.PropTypes.object,
   launchVideoPlayer: React.PropTypes.func,
   position: React.PropTypes.number,
-  isActive: React.PropTypes.bool,
+  activeState: React.PropTypes.string,
 };
 
 export default VideoCard;
